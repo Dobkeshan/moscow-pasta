@@ -2,10 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://co0gsdt7u8gdr" path="res://player.tscn" id="1_a202f"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a202f"]
-friction = 10.4
-rough = true
-
 [sub_resource type="BoxMesh" id="BoxMesh_a202f"]
 size = Vector3(20, 2, 20)
 
@@ -15,25 +11,15 @@ size = Vector3(20, 2, 20)
 [node name="Main" type="Node" unique_id=2087305636]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1115325493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64637506, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8644522, 0)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1839581887 instance=ExtResource("1_a202f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03182745, 2.0661936, 1.241871)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03182745, 2.3764596, -2.1652422)
 
-[node name="CameraPivot" type="Marker3D" parent="Player" unique_id=1442009394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7642273, -1.2237256)
-
-[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot" unique_id=182654853]
-transform = Transform3D(1, 0, 0, 0, 0.8896396, 0.45666322, 0, -0.45666322, 0.8896396, 0, 3.5174422, 4.654807)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1612002444]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.8716671, 0)
-physics_material_override = SubResource("PhysicsMaterial_a202f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1390693119]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1390693119]
 mesh = SubResource("BoxMesh_a202f")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=149328453]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=149328453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03672564, 0)
 shape = SubResource("BoxShape3D_noarx")
